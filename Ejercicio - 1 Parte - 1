@@ -1,0 +1,33 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Wed Nov 24 21:17:17 2021
+
+@author: Alex
+"""
+
+print("Empezando a trabajar con Python")#permite mostrar el texto entre ""
+print("Realizado por: Alex Aguilar")
+print("")#permite incluir una linea de espacio en blanco
+print("Consultando los tipos de valores:")
+print("")
+print("El tipo de dato de 875 es:")
+print(type(875))#permite mostrar el tipo de dato entre()
+print("")
+print("El tipo de dato de 4.89 es:")
+print(type(4.89))
+print("")
+print("El tipo de dato del texto: Now is better than never. es:")
+print(type("Now is better than never."))
+print("")
+print("El tipo de dato de 1.32 es:")
+print(type(1.32))
+print("")
+print("¿El valor 5 + 8i corresponde a un valor entero?")
+print(isinstance(5 + 8j, int))#permite mostar la comparación del tipo de dato 
+print("")
+print("¿El valor 8.2 corresponde a un valor entero?")
+print(isinstance(8.2, int))
+print("")
+print("¿El texto: Readability counts. corresponde a un string?")
+print(isinstance("Readability counts.", str))
+print("")
