@@ -1,0 +1,126 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Sat Dec  4 11:16:57 2021
+
+@author: Alex
+"""
+
+inicio1=True 
+while inicio1==True:
+    dic={}
+    opcion1=int(input("\nElija una opción:\n\n1) Demostración de cálculo de máximos y mínimos en diccionarios.\n2) Salir.\n\n"))
+    if opcion1==1:
+        inicio2=True
+        while inicio2==True:
+            opcion2=int(input("\nElija un diccionario para la demostración:\n\n1) {Raul:34,Paula:19,Jorge:43,Richard:10,Diana:3,Isabel:76,Gustavo:12,Diego:37}\n2) {tplA:(4,-12,56,-34,98,102),tplB:(9,0,1,10,-3,14),tlpC:(87,12,56,987,-61)}\n3) {val1:-12.5,val2:12.5,val3:83,val4:2.1,val5:23,val6:100,val7:13.4,val8:92}\n4) {lst1:[4,6,-12,56,-9,5.7,33,100],lst2:[9,0,81,-2,-56],lst3:[12,31,87,1,0,4,-11]}\n\n"))
+            if opcion2==1:
+                dic={"Raul":34,"Paula":19,"Jorge":43,"Richard":10,"Diana":3,"Isabel":76,"Gustavo":12,"Diego":37}
+                inicio3=True
+                while inicio3==True:
+                    mini=int(input("\nDigite el número de mínimos que desea mostrar: "))
+                    maxi=int(input("Digite el número de máximos que desea mostrar: "))
+                    if maxi+mini>len(dic):
+                        print("\n\nERROR!\n\nEl número de valores máximos y mínimos excede el tamaño del arreglo\n\nIntente de nuevo")
+                    else:
+                       minimos=[]
+                       maximos=[]
+                       valores=sorted(list(dic.values()))
+                       for i in range(0, mini):
+                           minimos.append(valores[i])
+                       print("\n\nValores calculados en formato LISTA:\n\nValores mínimos: "+str(minimos))
+                       tuplamin=tuple(minimos)
+                       valores.reverse()
+                       for j in range(0, maxi):
+                          maximos.append(valores[j])
+                       print("\nValores máximos: "+str(maximos))
+                       tuplamax=tuple(maximos)
+                       print("\n\nValores calculados en formato TUPLA:\n\nValores mínimos: "+str(tuplamin)+"\n\nValores máximos: "+str(tuplamax))
+                       break
+                break
+            elif opcion2==2:
+                dic={"tplA":(4,-12,56,-34,98,102),"tplB":(9,0,1,10,-3,14),"tlpC":(87,12,56,987,-61)}
+                inicio3=True
+                while inicio3==True:
+                    mini=int(input("\nDigite el número de mínimos que desea mostrar: "))
+                    maxi=int(input("Digite el número de máximos que desea mostrar: "))
+                    diclist=list(dic.values())
+                    listdic=[]
+                    for i in range(0,len(diclist)):
+                       listdic+=list(diclist[i] )
+                    if maxi+mini>len(listdic):
+                        print("\n\nERROR!\n\nEl número de valores máximos y mínimos excede el tamaño del arreglo\n\nIntente de nuevo")
+                    else:
+                       minimos=[]
+                       maximos=[]
+                       valores=sorted(listdic)
+                       for i in range(0, mini):
+                           minimos.append(valores[i])
+                       print("\n\nValores calculados en formato LISTA:\n\nValores mínimos: "+str(minimos))
+                       tuplamin=tuple(minimos)
+                       valores.reverse()
+                       for j in range(0, maxi):
+                          maximos.append(valores[j])
+                       print("\nValores máximos: "+str(maximos))
+                       tuplamax=tuple(maximos)
+                       print("\n\nValores calculados en formato TUPLA:\n\nValores mínimos: "+str(tuplamin)+"\n\nValores máximos: "+str(tuplamax))
+                       break
+                break
+            elif opcion2==3:
+                dic={"val1":-12.5,"val2":12.5,"val3":83,"val4":2.1,"val5":23,"val6":100,"val7":13.4,"val8":92}
+                inicio3=True
+                while inicio3==True:
+                    mini=int(input("\nDigite el número de mínimos que desea mostrar: "))
+                    maxi=int(input("Digite el número de máximos que desea mostrar: "))
+                    if maxi+mini>len(dic):
+                        print("\n\nERROR!\n\nEl número de valores máximos y mínimos excede el tamaño del arreglo\n\nIntente de nuevo")
+                    else:
+                       minimos=[]
+                       maximos=[]
+                       valores=sorted(list(dic.values()))
+                       for i in range(0, mini):
+                           minimos.append(valores[i])
+                       print("\n\nValores calculados en formato LISTA:\n\nValores mínimos: "+str(minimos))
+                       tuplamin=tuple(minimos)
+                       valores.reverse()
+                       for j in range(0, maxi):
+                          maximos.append(valores[j])
+                       print("\nValores máximos: "+str(maximos))
+                       tuplamax=tuple(maximos)
+                       print("\n\nValores calculados en formato TUPLA:\n\nValores mínimos: "+str(tuplamin)+"\n\nValores máximos: "+str(tuplamax))
+                       break
+                break
+            elif opcion2==4:
+                dic={"lst1":[4,6,-12,56,-9,5.7,33,100],"lst2":[9,0,81,-2,-56],"lst3":[12,31,87,1,0,4,-11]}
+                inicio3=True
+                while inicio3==True:
+                    mini=int(input("\nDigite el número de mínimos que desea mostrar: "))
+                    maxi=int(input("Digite el número de máximos que desea mostrar: "))
+                    diclist=list(dic.values())
+                    listdic=[]
+                    for i in range(0,len(diclist)):
+                       listdic+=diclist[i] 
+                    if maxi+mini>len(listdic):
+                        print("\n\nERROR!\n\nEl número de valores máximos y mínimos excede el tamaño del arreglo\n\nIntente de nuevo")
+                    else:
+                       minimos=[]
+                       maximos=[]
+                       valores=sorted(listdic)
+                       for i in range(0, mini):
+                           minimos.append(valores[i])
+                       print("\n\nValores calculados en formato LISTA:\n\nValores mínimos: "+str(minimos))
+                       tuplamin=tuple(minimos)
+                       valores.reverse()
+                       for j in range(0, maxi):
+                          maximos.append(valores[j])
+                       print("\nValores máximos: "+str(maximos))
+                       tuplamax=tuple(maximos)
+                       print("\n\nValores calculados en formato TUPLA:\n\nValores mínimos: "+str(tuplamin)+"\n\nValores máximos: "+str(tuplamax))
+                       break
+                break
+            else:
+                print("\nERROR!\n\nIntente de nuevo")
+    elif opcion1==2:
+        break
+    else:
+        print("\nERROR!\n\nIntente de nuevo")
+        
