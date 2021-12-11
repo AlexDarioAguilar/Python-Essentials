@@ -1,0 +1,49 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Tue Nov 30 18:30:57 2021
+
+@author: Alex
+"""
+
+print("Validación de contraseña\n\nRecuerde que su contraseña debe cumplir con los siguientes requisitos:\n\n1. Debe contener al menos una letra minúscula entre las letras: a,b,c,d,e,f,g,h,i,j.\n2. Debe contener al menos una letra mayúscula entre las letras: K,L,M,N,O,P,Q,R,S,T.\n3. Debe contener al menos un número entre 0 y 9.\n6. Debe contener un símbolo especial entre: $,%,*,@\n5. Tamaño mínimo de 5 caracteres y máximo de 15.")
+var1=list(input("Ingrese su contraseña que desea validar: "))
+
+control=True
+while control==True:
+    if "a" in var1 or "b" in var1 or "c" in var1 or "d" in var1 or "e" in var1 or "f" in var1 or "g" in var1 or "h" in var1 or "i" in var1 or "j" in var1:
+        print("\nLa contraseña cumple con el requisito 1")
+        a=True
+    else:
+        print("\n*La contraseña NO cumple con el requisito 1")
+        a=False
+    if "K" in var1 or "L" in var1 or "M" in var1 or "N" in var1 or "O" in var1 or "P" in var1 or "Q" in var1 or "R" in var1 or "S" in var1 or "T" in var1:
+        print("La contraseña cumple con el requisito 2")
+        b=True
+    else:
+        print("*La contraseña NO cumple con el requisito 2") 
+        b=False
+    if "0" in var1 or "1" in var1 or "2" in var1 or "3" in var1 or "4" in var1 or "5" in var1 or "6" in var1 or "7" in var1 or "8" in var1 or "9" in var1: 
+        print("La contraseña cumple con el requisito 3")
+        c=True
+    else:
+        print("*La contraseña NO cumple con el requisito 3")
+        c=False
+    if "$" in var1 or "%" in var1 or "*" in var1 or "@" in var1:
+        print("La contraseña cumple con el requisito 4")
+        d=True
+    else:
+        print("*La contraseña NO cumple con el requisito 4")
+        d=False
+    if len(var1)<5 or len(var1)>15:
+        print("*La contraseña NO cumple con el requisito 5")
+        e=False
+    else:
+        print("La contraseña cumple con el requisito 5")
+        e=True
+    if a==True and b==True and c==True and d==True and e==True:
+        print("\nLa contraseña es válida")
+        break
+    else:
+        print("\nLa contraseña NO es válida")
+        var1=list(input("Re-Ingrese su contraseña que desea validar: "))
+  
